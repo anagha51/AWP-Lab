@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Move Image Left</title>
+    <style>
+        #myImg {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h3>CLICK BUTTON TO SHIFT IMAGE TO LEFT</h3>
+    <img src="train.png" alt="train" id="myImg" width="200" style="left: 100px; position: relative;">
+    <br /><br />
+    <button onclick="moveleft()">Move Left</button>
+
+    <script>
+        function moveleft() {
+            let img = document.getElementById("myImg");
+            let currentLeft = parseInt(img.style.left); 
+            img.style.left = (currentLeft + 20) + "px";
+        }
+    </script>
+</body>
+</html>
